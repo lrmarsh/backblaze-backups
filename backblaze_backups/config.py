@@ -3,8 +3,6 @@ from dataclasses_json import dataclass_json
 from typing import List
 from backblaze_backups.io import Io
 
-B2_PREFIX = "b2://"
-
 @dataclass
 class Bucket:
     local: str
@@ -40,7 +38,7 @@ class ConfigManager:
                 raise ConfigException(f"Buckets are not in the correct format: Expexted local:remote. Got: {local_remote}")
             
             buckets.append(Bucket(local_remote[0], local_remote[1]))
-            
+
         return buckets
 
 class ConfigException(Exception):

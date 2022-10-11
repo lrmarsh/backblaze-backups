@@ -28,4 +28,4 @@ MANIFEST
 
 #vscode
 .vscode
-config.json
+./config.json

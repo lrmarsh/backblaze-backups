@@ -1,4 +1,5 @@
 from os.path import exists
+import pathlib
 
 
 class Io:
@@ -14,3 +15,6 @@ class Io:
 
     def path_exists(self, file_path: str) -> bool:
         return exists(file_path)
+
+    def get_root(self) -> str:
+        return pathlib.Path(__file__).parent.parent

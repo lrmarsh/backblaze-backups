@@ -16,9 +16,8 @@ B2_PREFIX = "b2://"
 
 class BackblazeBackup:
     def __init__(self) -> None:
-        self.config = ConfigManager(
-            '/mnt/b/code/backblaze-backups/config.json')
         self.io = Io()
+        self.config = ConfigManager(f'{self.io.get_root()}/config.json')
         self.bb = B2Api(InMemoryAccountInfo())
         self._auth()
         self.buckets = self._list_buckets()
@@ -60,3 +59,8 @@ class BackblazeBackup:
                     reporter=reporter,
                 )
         sys.stdout.write(f"Finished backup at:{now.strftime('%m/%d/%Y, %H:%M:%S')}")                
+
+
+def backup():
+    bb = BackblazeBackup()
+    bb.backup()

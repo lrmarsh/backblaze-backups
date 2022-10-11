@@ -30,10 +30,10 @@ Run `poetry install`
 `poetry run sort`
 
 ### Arguments
-`--root_dir` Directory to start the search in, default .
-`--photos_dir` Directory to move photos, default is ./photos
-`--videos_dir` Directory to move videos, default is ./videos
-`--docs_dir` Directory to move docs, default is ./docs
+- `--root_dir` Directory to start the search in, default .
+- `--photos_dir` Directory to move photos, default is ./photos
+- `--videos_dir` Directory to move videos, default is ./videos
+- `--docs_dir` Directory to move docs, default is ./docs
 
 Run `poetry run sort -h` to see full list of arugments
 
